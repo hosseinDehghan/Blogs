@@ -1,0 +1,16 @@
+{
+    "name": "hossein/blogs",
+    "description": "this is blogs package for panel",
+    "authors": [
+        {
+            "name": "HosseinDehghan",
+            "email": "h.dehghan72@yahoo.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Hosein\\Blogs\\": "src/"
+        }
+    },
+    "require": {}
+}
