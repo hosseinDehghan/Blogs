@@ -41,11 +41,11 @@ class BlogsController extends Controller
         return redirect('blogs');
     }
     public function editCategory($cat,$id){
-        $category=categoryblogs::find($id)->first();
+        $category=categoryblogs::where("id",$id)->first();
         return redirect("blogs/$id")->with("category_name",$category->name);
     }
     public function categoryUpdate(Request $request,$id){
-        $category=categoryblogs::find($id)->first();
+        $category=categoryblogs::where("id",$id)->first();
         $category->name=$request->all()["name"];
         $category->save();
         return redirect("blogs");
@@ -103,11 +103,11 @@ class BlogsController extends Controller
     return $blogs;
 }
     public function editBlog($id){
-        $blog=blogs::find($id)->first();
+        $blog=blogs::where("id",$id)->first();
         return redirect("blogs")->with("blog",$blog);
     }
     public function blogUpdate(Request $request,$id){
-        $blog=blogs::find($id)->first();
+        $blog=blogs::where("id",$id)->first();
         $destination=public_path()."/upload/";
         $file=$blog->image;
         if(!empty($request->file("image"))){
