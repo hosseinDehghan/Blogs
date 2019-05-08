@@ -3,7 +3,7 @@
 this is Blogs package
 ## Step1
 ##### run this command in your project for added package
->`composer require "hosein/blogs":"dev-master"`
+>`composer require "hossein/blogs":"dev-master"`
 ## step2
 ##### added ServiceProvider
 >`\Hosein\Members\BlogsServiceProvider::class`
